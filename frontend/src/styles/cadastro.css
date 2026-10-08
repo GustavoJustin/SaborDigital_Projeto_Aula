@@ -1,0 +1,95 @@
+.container-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+}
+
+.campo input, 
+.campo textarea, 
+.campo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.campo textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#btn-cadastrar {
+    background-color: var(--cor-verde);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+#btn-cadastrar:hover {
+    background-color: #219150;
+}
+
+#mensagem-feedback {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.feedback-sucesso {
+    display: block !important;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback-erro {
+    display: block !important;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+@media screen and (max-width: 600px) {
+    .container-form {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .linha-dupla {
+        grid-template-columns: 1fr;
+    }
+}
